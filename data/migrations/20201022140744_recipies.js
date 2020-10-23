@@ -37,7 +37,15 @@ exports.up = async function(knex) {
                 .onDelete("CASCADE")
                 .onUpdate("CASCADE")
                 .notNull()
-        
+
+     table 
+            .integer("amount_id")
+                .references("id")
+                .inTable("amount")
+                .onDelete("CASCADE")
+                .onUpdate("CASCADE")
+                .notNull()
+                       
         table.primary(["recipies_id", "ingredients_id"])
 
 

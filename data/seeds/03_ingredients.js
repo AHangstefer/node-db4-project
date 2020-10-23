@@ -1,5 +1,5 @@
 
-exports.seed = function(knex) {
+exports.seed =async function(knex) {
   // Deletes ALL existing entries
   await knex("ingredients").insert([
     {name: "coffee"},
@@ -11,7 +11,8 @@ exports.seed = function(knex) {
     {name: "water"},
     {name: "ice cream"},
     {name: "whipped cream"},
-    {name: "ice"}
+    {name: "ice"},
+    {name: "tomato juice"}
 
   ])
 };
